@@ -1,0 +1,8 @@
+[options]
+; This is the password that allows database operations:
+; admin_passwd = admin
+db_host = False
+db_port = False
+db_user = chang
+db_password = False
+addons_path = /home/chang/git/odoo/odoo8/openerp/addons,/home/chang/git/odoo/odoo8/addons,/home/chang/git/odoo/odoo8/addons/sa/design-theme,/home/chang/git/odoo/odoo8/addons/community/aeroo/aeroo_reports,/home/chang/git/odoo/odoo8/addons/oca/vertical-association,/home/chang/git/odoo/odoo8/addons/oca/website,/home/chang/git/odoo/odoo8/addons/onnet/gst,/home/chang/git/odoo/odoo8/addons/onnet/hr,/home/chang/git/odoo8dev/,/home/chang/git/odoo8dev/basic_addons,/home/chang/git/odoo8dev/addons,/home/chang/git/odoo8dev/mrp_addons
