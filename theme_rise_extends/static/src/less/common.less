@@ -1,11 +1,192 @@
+
+@dark-y : #f3a847;
+@medium-y : #f9b732;
+@ebm-grey : #555;
+
+
+
+
+/* GENERAL ------------------------------------------------------------------------------------------------*/
+
+/* font-family -------------------------------*/
 body {
-    font-family: Arial, san-serif;
+	font-family: Arial, san-serif;
+	font-size: 14px;
+}
+
+
+/*  font color -------------------------------*/
+
+
+
+
+/*  button  -------------------------------*/
+
+.btn-default {
+    color: @ebm-grey;
+	
+		&:hover {
+		background: @dark-y;
+	}
+}
+
+
+a.btn.btn-primary {
+    background-color: @medium-y;
+    border-color: transparent;
+    font-weight: bold;
+}
+
+a.btn.btn-lg {
+    font-size: 14px;
+}
+
+
+
+
+
+/* NAVIGATION ------------------------------------------------------------------------------------------------*/
+
+/* TOP NAV -------------------------------------*/
+#row1 {
+    background-color: #222;
+	
+	span {
+		color: #ddd;
+		font-size : 13px;
+	}
+	
+	#user_access>div {
+		border-color: #555;
+	
+		>a {
+			color: #ddd!important;
+			font-size : 13px;
+		}
+	}
+}
+
+
+
+@media (min-width: 992px) {
+
+	#user_access .col-md-3 {
+		width: 22%;
+	}
+
+}
+
+
+
+
+/*  LOGO HEADER  -------------------------------*/
+
+
+.mt32 {
+    margin-top: 17px !important;
+}
+
+.mb32 {
+    margin-top: 40px;
+}
+
+
+.mt48 {
+    margin-top: 33px !important;
+}
+
+.mb32 {
+    margin-bottom: 22px !important;
+}
+
+.mb32 {
+    margin-bottom: 22px !important;
+}
+
+.mb48 {
+    margin-bottom: 38px !important;
+}
+
+
+
+
+
+/*  shopping cart -------------------------------*/
+
+#row2 #sale_cart {
+
+	right : -10px;
+
+
+		a .fa {
+		margin-right: 5px;
+		font-size: 21px;
+		vertical-align: -2px;
+	}
+}
+
+
+
+
+/*  MENU  -------------------------------*/
+.nav>li>a {
+    padding: 13px 18px;
 }
 
 .navbar.navbar-default .navbar-nav>.active a {
-     color: #b12704!important;
+	color: @dark-y!important;
+    font-weight: bold;
 }
 
+.navbar.navbar-default .navbar-nav a:hover {
+    color: @dark-y!important;
+}
+
+
+/* PRODUCT LISTING ------------------------------------------------------------------------------------------------*/
+
+.product-list .owl-item .product-single .single-product {
+    border: none;
+	
+	&:hover {
+		border: none;
+	}
+	
+	
+	section {
+		
+		h5 {
+			font-size: 16px;
+			max-height: 45px;
+			margin-bottom: 5px;
+			height: auto;
+			
+			&.product-name a {
+				color: #666!important;
+			}
+		}
+		
+		.product_price b span {
+			font-size: 14px;
+			color: #333;
+			font-weight: bold;
+		}
+	}
+	
+	hr,.operation-btn {
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+/* HOME PAGE ------------------------------------------------------------------------------------------------*/
+
+/* Home banners */
 .snippet_banner {
     background-image: none;
 }
