@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template id="product_re-enable_description"
+                  inherit_id="website_product_content_block_73lines.product_replace_description"
+                  name="Re-enable Product Description">
+			<xpath expr="."
+				position="attributes">
+                <attribute name="position">after</attribute>
+			</xpath>
+		</template>
+
+        <template id="product_show_description"
+                  inherit_id="website_product_content_block_73lines.website_product_full_details"
+                  name="Show Product Description">
+			<xpath expr="//div[@t-if='product.description_sale']"
+                   position="replace">
+                <div itemprop="description"
+                     t-field="product.website_description"
+                     class="oe_structure mt16"
+                     id="product_full_description" />
+			</xpath>
+		</template>
+
+
+
+    </data>
+</openerp>

@@ -5,9 +5,10 @@
     'version': '1.0',
     'author': "ohmycode",
     'depends': [
-        'theme_rise',
+        'theme_rise'
     ],
     'data': [
-        'view/assets.xml'
-    ],
+        'view/assets.xml',
+        'view/website_product.xml'
+    ]
 }
