@@ -2,15 +2,6 @@
 <openerp>
     <data>
 
-        <template id="product_re-enable_description"
-                  inherit_id="website_product_content_block_73lines.product_replace_description"
-                  name="Re-enable Product Description">
-			<xpath expr="."
-				position="attributes">
-                <attribute name="position">after</attribute>
-			</xpath>
-		</template>
-
         <template id="product_show_description"
                   inherit_id="website_product_content_block_73lines.website_product_full_details"
                   name="Show Product Description">
