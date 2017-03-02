@@ -8,10 +8,14 @@
 
 /* GENERAL ------------------------------------------------------------------------------------------------*/
 
-/* font-family -------------------------------*/
+/* font-style -------------------------------*/
 body {
 	font-family: Arial, san-serif;
 	font-size: 14px;
+}
+
+h1 {
+    font-size: 1.85em;
 }
 
 
@@ -56,22 +60,31 @@ a.btn.btn-lg {
 		font-size : 13px;
 	}
 	
-	#user_access>div {
-		border-color: #555;
+	#user_access {
 	
-		>a {
-			color: #ddd!important;
-			font-size : 13px;
+		>div {
+			border-color: #555;
+			
+			&#user_logout,&#user_register {
+				border-right: 1px solid #555!important;
+			}
+
+			>a {
+				color: #ddd!important;
+				font-size : 13px;
+			}
 		}
 	}
 }
 
 
 
+
+
 @media (min-width: 992px) {
 
 	#user_access .col-md-3 {
-		width: 22%;
+
 	}
 
 }
@@ -82,28 +95,28 @@ a.btn.btn-lg {
 /*  LOGO HEADER  -------------------------------*/
 
 
-.mt32 {
+.mt32#compnay_name {
     margin-top: 17px !important;
 }
 
-.mb32 {
+.mb32#sale_search {
     margin-top: 40px;
 }
 
 
-.mt48 {
+.mt48#sale_cart {
     margin-top: 33px !important;
 }
 
-.mb32 {
+.mb32#compnay_name {
     margin-bottom: 22px !important;
 }
 
-.mb32 {
+.mb32#sale_search {
     margin-bottom: 22px !important;
 }
 
-.mb48 {
+.mb48#sale_cart {
     margin-bottom: 38px !important;
 }
 
@@ -113,34 +126,49 @@ a.btn.btn-lg {
 
 /*  shopping cart -------------------------------*/
 
-#row2 #sale_cart {
+#row2 {
+	    background: transparent;
+		border-bottom: 1px solid #efefef;
 
-	right : -10px;
+	#sale_cart {
+
+		right : -10px;
 
 
 		a .fa {
-		margin-right: 5px;
-		font-size: 21px;
-		vertical-align: -2px;
+			margin-right: 5px;
+			font-size: 21px;
+			vertical-align: -2px;
+		}
 	}
+
 }
-
-
 
 
 /*  MENU  -------------------------------*/
 .nav>li>a {
-    padding: 13px 18px;
+    padding: 13px 20px;
 }
 
-.navbar.navbar-default .navbar-nav>.active a {
-	color: @dark-y!important;
-    font-weight: bold;
+.nav>li:first-child >a {
+		padding-left: 10px;
 }
 
-.navbar.navbar-default .navbar-nav a:hover {
-    color: @dark-y!important;
+.navbar.navbar-default .navbar-nav {
+
+	a {	
+		color : #777!important;
+	
+		&:hover {color: @dark-y!important;}
+	}
+
+	
+	>.active a {
+		color: @dark-y!important;
+		font-weight: bold;
+	}
 }
+
 
 
 /* PRODUCT LISTING ------------------------------------------------------------------------------------------------*/
@@ -187,6 +215,64 @@ a.btn.btn-lg {
 /* HOME PAGE ------------------------------------------------------------------------------------------------*/
 
 /* Home banners */
-.snippet_banner {
+.snippet_banner.snippet_banner_carousel {
     background-image: none;
+	padding-top: 30px;
 }
+
+
+
+
+
+
+/* OFFER OF THE MONTH  ------------------------------------------------------------------------------------------------*/
+
+.products_pager>.row {
+    background-color: transparent;
+    border: none;
+}
+
+
+.oe_product section {
+    padding-bottom: 25px!important;
+}
+
+.oe_product .oe_product_cart {
+     border: none;
+	 &:hover { border: none;}
+	 
+	h5 {
+
+		height: auto;
+		max-height : 45px;	
+	}
+	 
+	 .product_price a.add-to-cart {
+		display: none;
+	}
+	 
+}
+
+.owl-theme .owl-controls .owl-buttons {
+    top: -55px;
+	
+	div{
+	
+		color: #555!important;
+		
+		&:hover {
+			color: #f3a847!important;
+		}
+	}
+}
+
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-color: #eee;
+}
+
+
+
+
