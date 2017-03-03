@@ -9,6 +9,7 @@
     ],
     'data': [
         'view/assets.xml',
-        'view/website_product.xml'
+        'view/website_product.xml',
+        'view/product.xml',
     ]
 }
