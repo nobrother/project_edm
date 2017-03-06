@@ -5,7 +5,7 @@
     'version': '1.0',
     'author': "ohmycode",
     'depends': [
-        'theme_rise', 'website_product_sorting_73lines'
+        'theme_rise'
     ],
     'data': [
         'view/assets.xml',

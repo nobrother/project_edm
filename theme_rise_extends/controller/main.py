@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*
-from openerp import _
+from openerp import http, _
+from openerp.http import request
 from openerp.addons.website_sale.controllers.main import website_sale
 
 import collections
@@ -20,4 +21,22 @@ class WebsiteSale(website_sale):
         """ Bug fix the order query """
         return 'website_published desc, %s' % \
                self.order_by.get(post.get('order', ''), { 'query': 'website_sequence desc' })['query']
+
+    @http.route()
+    def shop(self, page=0, category=None, search='', ppg=False, **post):
+
+        res = super(WebsiteSale, self).shop(page=page, category=category, search=search,
+                                             ppg=ppg, **post)
+
+        url = request.httprequest.__dict__['environ'].get('PATH_INFO', '/shop')
+        keep = request.context.get('keep', False)
+        if keep:
+            keep.path = url
+
+            # Remove '?category' query
+            if keep.args['category']:
+                del keep.args['category']
+
+
+        return res
 
