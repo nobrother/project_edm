@@ -90,6 +90,11 @@ a.btn.btn-lg {
 
 
 
+#row2 #compnay_details {
+	display: none;
+}
+
+
 
 
 @media (min-width: 992px) {
@@ -100,7 +105,9 @@ a.btn.btn-lg {
 
 }
 
-
+.label-primary {
+    background-color: @dark-y;
+}
 
 
 /*  LOGO HEADER  -------------------------------*/
@@ -180,6 +187,11 @@ a.btn.btn-lg {
 		color: @dark-y!important;
 		font-weight: bold;
 	}
+}
+
+
+#wrapwrap .navbar-default {
+    background-color: #fff!important;
 }
 
 
@@ -351,7 +363,7 @@ hr {
 			padding-bottom: 10px;
 			padding-top: 0px;
 			
-			&:hover,&:active{
+			&:hover,&.active{
 				background-color: transparent;
 				color: @dark-y;
 			}
@@ -594,4 +606,13 @@ hr {
 	#oe_categories_grid {
 		width: 80%;
 	}
+}
+
+
+/* FOOTER  ------------------------------------------------------------------------------------------------*/
+
+
+#footer_container, #footer {
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
