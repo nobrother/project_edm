@@ -273,7 +273,7 @@ a.btn.btn-lg {
 		
 		a {
 			color: #555;
-			font-size: 15px;
+			font-size: 14px;
 			font-family: Arial,sans-serif;
 			
 			&:hover {
@@ -339,70 +339,110 @@ hr {
 	
 		a {
 			width: 70%;
+			font-size : 12px;
 		}
 	
 		i.fa {
-			top: 12px!important;
+			top: 9px!important;
 			right: 40px!important;
-			color: #ddd!important;
-			font-size: 11px;
+			color: #bbb!important;
+			font-size: 10px;
 		}
 	}
 	
 	
-	#o_shop_collapse_category li 
+
 	
 	.nav-hierarchy {
 		border: none;
 	}
 	
-	>ul ul{
-	
-		margin-top: 3px;
-			>li {
-			padding-bottom: 10px;
-			padding-top: 0px;
-			
-			&:hover,&.active{
-				background-color: transparent;
-				color: @dark-y;
-			}
-			
-			>a {
-				    padding-left: 25px!important;
-					color: #333;
-			}
-			
-		}
-	}
-	
-	
 	h3 {
 		display:none;
 	}
 	
-	>ul>li {
-		border-bottom: none;
-		padding : 5px 0;
+	>ul {
+	
+		ul{
 		
-		&.active {
-			color: @dark-y;
-			background-color: #fff;
+			margin-top: 3px;
+			>li {
+				padding-bottom: 0px;
+				padding-top: 0px;
+				
+				&:last-child { padding-bottom: 3px;}
+				
+				&:hover,&.active{
+					background-color: transparent;
+					color: @dark-y;
+					
+					>a {
+						
+						&:hover, &.active{
+							background-color: transparent!important;
+							color: @dark-y!important;
+						}	
+						
+					}
+					
+				}
+				
+				>a {
+						padding-left: 20px!important;
+						color: #333;
+						
+						&:hover, &.active{
+							background-color: transparent!important;
+							color: @dark-y!important;
+						}	
+						
+				}
+				
+				>ul >li >a { padding-left: 30px!important;}
+				
+			}
 		}
-		
-		
-		>a {
-			padding-left: 10px!important;
-			color: #333;
+	
+			li {
+				border-bottom: none;
+				padding : 2px 0;
+			}
+	
+	
+	
+		>li {
+
 			
-			&:focus, &:hover {
+			&.active {
 				color: @dark-y;
-				background-color: transparent;
+				background-color: #fff;
 			}
 			
 			
-		}
+			>a {
+				padding-left: 10px!important;
+				color: #333;
+				
+				
+				&:focus, &:hover {
+					color: @dark-y;
+					background-color: transparent;
+				}
+				
+				
+			}
+		}	
+	
 	}
+
+	
+	
+	 .nav-pills>li.active>a,  .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+		color: @dark-y;
+		background-color: transparent;
+		font-weight: bold;
+	}
+	
 }
 
 .oe_product section {
@@ -450,11 +490,7 @@ hr {
 }
 
 
-.category-menu .nav-pills>li.active>a, .category-menu .nav-pills>li.active>a:focus, .category-menu .nav-pills>li.active>a:hover {
-    color: @dark-y;
-    background-color: transparent;
-	font-weight: bold;
-}
+
 
 
 @media (min-width: 992px) {
@@ -503,6 +539,11 @@ hr {
 
 	#product_detail{
 	
+		.breadcrumb {
+			margin-bottom: 0px;
+			margin-top: 5px;
+		}
+	
 		 .image_bigsize #main_image a img {
 			border: none;
 			   width: 380px!important;
@@ -512,18 +553,47 @@ hr {
 		
 		#product_details h1, .js_sale #product_detail #product_price_section h1 {
 			font-size: 32px;
+			margin-bottom: 10px;
 		}
 		
-		.oe_price_h4 {
-			.oe_price {
-				font-size: 30px;
+		.product_price.mt16 {
+			 margin-bottom: 15px;
+		
+			.oe_price_h4 {
+				.oe_price {
+					font-size: 32px;
+					color: @dark-y;
+					font-weight: normal;
+				}
+				
+				.oe_default_price {
+					color: #777;
+					font-size: 20px;
+				}
+			}
+		}
+		
+		.services {
+
+			font-size: 12px;
+			
+			b { margin: 0 10px; }
+			
+			i {
+				margin-right: 7px;
+				font-size: 18px;
+				vertical-align: -3px;
 				color: @dark-y;
 			}
 			
-			.oe_default_price {
+			a {
+
 				color: #555;
+				text-decoration: underline;
 			}
 		}
+		
+		
 	}
 
 	.owl-carousel .owl-item {
@@ -539,6 +609,11 @@ hr {
 	}
 }
 
+.quotation-description {
+    color: #555;
+    line-height: 1.8;
+}
+
 .css_quantity {
     margin-bottom: 15px;
 	
@@ -550,16 +625,58 @@ hr {
 			padding-left: 0!important;
 		}
 		
+		a {
+			i {color : #000;
+			
+				&:hover {
+					color: @dark-y;
+				}
+			}
+			
+		}
+		
 	}
 	
+	.js_quantity.form-control {
+		color: #555;
+	}
+	
+}
+.js_product {
+
+	i {
+		color: #0060AA;
+		&:hover {
+			color: @dark-y;
+		}
+	}
+	
+	.add_to_wishlist {
+		font-family: arial,sans-serif;
+		margin-left: 7px;
+		font-size: 15px;
+		
+		&:hover {
+			color: @dark-y!important;
+		}
+		
+	}
+
+
 }
 
 
 #add_to_cart {
-    width: 45%;
-    padding: 12px 10px;
+    width: 40%;
+    padding: 10px 10px;
     font-size: 14px;
-    color: #333;
+    color: #fff;
+    margin-bottom: 10px;
+	
+	&:hover {
+		background-color: #555;
+		border-color: #555;
+	}
 }
 
 .oe_categories {
@@ -598,6 +715,11 @@ hr {
 	}
 }
 
+
+#thumb-slider{
+	margin-top: 10px!important;
+}
+
 @media (min-width: 992px){
 	#oe_categories_menu {
 		width: 20%;
@@ -609,10 +731,111 @@ hr {
 }
 
 
+.breadcrumb {
+	>.active {
+		color: @dark-y;
+	}
+	
+	>li a {
+		color: #666;
+		font-size: 13px;
+	}
+}
+
+/* FULL DESCRPTION -----------*/
+#product_full_description {
+
+	.full-desc-content {
+	
+		.tab-content{
+			border: none;
+			padding: 10px 0px;
+		}
+		
+		.nav li.active a {
+			border: none;
+			border-bottom: 1px solid #f0f0f0;
+		}
+	}
+}
+
+
+.full-info-custom{
+
+	color: #555;
+	
+	h6{
+		color: #666!important;
+		font-size: 17px;
+		margin-top: 30px;
+		&:first-child { margin-top: 10px;}
+	}
+	
+	ul {
+		-webkit-padding-start: 15px;
+		
+		li {
+			list-style-type: disc;
+			margin-bottom: 7px;
+		}
+	
+	}
+	
+	ol {
+		-webkit-padding-start: 15px;
+		padding-right: 5%;
+		
+		li {
+			list-style-type: decimal;
+			margin-bottom: 7px;
+			padding-left: 10px;
+		}
+	
+	}
+	
+	
+
+	.prod-info-section {
+		ul {
+		
+		-webkit-padding-start: 0px;
+		    padding-right: 5%;
+			
+			li{
+				list-style-type: none;
+				font-size: 15px;
+				line-height: 1.3;
+				margin-bottom: 10px;
+				color: #777;
+				letter-spacing: 0.1px;
+			
+			}
+		
+		}
+	
+	}
+	
+
+}
+
+
+
+
+ 
+
+
 /* FOOTER  ------------------------------------------------------------------------------------------------*/
 
 
 #footer_container, #footer {
     padding-top: 0px;
     padding-bottom: 0px;
+	
+	.snippet_three_block {
+		background-color: #fff;
+		padding: 48px 0;
+		border-top: 1px solid #eee;
+	}
+	
+	
 }
