@@ -1,9 +1,31 @@
 # -*- coding: utf-8 -*
 from openerp import http, _
 from openerp.http import request
-from openerp.addons.website_sale.controllers.main import website_sale
-
+from openerp.addons.website_sale.controllers.main import website_sale, QueryURL
+from openerp.addons.website.controllers.main import Website
 import collections
+
+class Website(Website):
+    @http.route()
+    def index(self, **kw):
+
+        res = super(Website, self).index(**kw)
+
+        cr, uid, context, pool = request.cr, request.uid, request.context, request.registry
+
+        keep = QueryURL('/shop')
+        category_obj = pool['product.public.category']
+        category_ids = category_obj.search(cr, uid,
+                                           [('parent_id', '=', False)],
+                                           context=context)
+        categs = category_obj.browse(cr, uid, category_ids, context=context)
+
+        res.qcontext.update({
+            'keep': keep,
+            'categories': categs,
+            'parent_category_ids': [],
+        })
+        return res
 
 class WebsiteSale(website_sale):
 
