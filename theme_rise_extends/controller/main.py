@@ -46,7 +46,7 @@ class WebsiteSale(website_sale):
 
     @http.route()
     def shop(self, page=0, category=None, search='', ppg=False, **post):
-
+        """ Fixed the product url in shop """
         res = super(WebsiteSale, self).shop(page=page, category=category, search=search,
                                              ppg=ppg, **post)
 
@@ -54,11 +54,6 @@ class WebsiteSale(website_sale):
         keep = request.context.get('keep', False)
         if keep:
             keep.path = url
-
-            # Remove '?category' query
-            if keep.args['category']:
-                del keep.args['category']
-
 
         return res
 
