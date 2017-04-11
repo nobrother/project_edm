@@ -11,6 +11,17 @@
 
 }
 
+#wrap {
+	    padding: 20px 0 80px;
+
+	&.wrap-home {
+		padding: 0px;
+	}		
+}
+
+
+
+
 /* Old home : http://103.17.208.47:8080/page/homepage   */
 
 /* GENERAL ------------------------------------------------------------------------------------------------*/
@@ -26,6 +37,10 @@ h1 {
 	color: #444!important;
 }
 
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, san-serif!important;
+}
 
 /*  font color -------------------------------*/
 
@@ -67,6 +82,22 @@ a:hover.btn.btn-primary {
 
 a.btn.btn-lg {
     font-size: 14px;
+}
+
+
+/*  ALERT  -------------------------------*/
+.alert-success {
+    background-color: @dark-y;
+    border-color: transparent;
+    color: #fff;
+	font-weight: bold;
+	
+		.close:focus, .close:hover {
+		color: #fff;
+		opacity: 0.8;
+		filter: alpha(opacity=80);
+	}
+	
 }
 
 
@@ -168,7 +199,7 @@ a.btn.btn-lg {
     margin-left: 10px;
 }
 
-/*  shopping cart -------------------------------*/
+/*  shopping cart button -------------------------------*/
 
 #row2 {
 	    background: transparent;
@@ -233,7 +264,7 @@ a.btn.btn-lg {
 	section {
 		
 		h5 {
-			font-size: 16px;
+			font-size: 14px;
 			max-height: 45px;
 			margin-bottom: 5px;
 			height: auto;
@@ -429,6 +460,8 @@ hr {
 				h5 a {
 					color: #555;
 					font-weight: normal;
+					font-size: 15px;
+					
 					
 					&:hover {
 						color: @dark-y;	
@@ -616,6 +649,7 @@ hr {
 		margin-top: 0px;
 			&:first-child {
 				margin-top: 30px;
+				margin-bottom: 20px;
 			}
 		
 		
@@ -691,8 +725,6 @@ hr {
 .js_sale {
 
 	#product_detail{
-	
-	padding-bottom: 80px;
 	
 		.breadcrumb {
 			margin-bottom: 0px;
@@ -1164,6 +1196,12 @@ ul.footer-menu{
 .contact-us {
 	padding: 30px 0 70px 10px;
 	
+	.static-page-container h1 { 
+		font-size: 23px;
+		font-weight: bold;
+	}
+	
+	
 	address.mb0 {
 		>div:first-child {
 		
@@ -1210,7 +1248,7 @@ address i {
 /* STATIC PAGES  ------------------------------------------------------------------------------------------------*/
 
 .static-page-container{
-    padding: 20px 25px 60px;
+    padding: 0px 25px 0px;
 	color: #222;
 	
 	*{
@@ -1310,6 +1348,27 @@ ul.ul-in-paragraph{
     margin-top: 5px;
 }
 
+
+
+/* SHOPPING CART PAGE ------------------------------------------------------------------------------------------------*/
+
+.oe_website_sale .wizard li.text-primary {
+    background: transparent;
+	
+	>.chevron:before {
+		border-left-color: #fff;
+	}
+}
+
+
+/* WISH LIST   ------------------------------------------------------------------------------------------------*/
+
+
+#wishlist_products td {
+
+	padding: 15px 0;
+
+}
 
 
 
